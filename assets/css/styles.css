@@ -287,6 +287,11 @@ img {
   font-size: var(--h1-font-size);
   color: var(--first-color);
   font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-1);
+}
+
+.home__job__title {
+  margin-bottom: var(--mb-3);
 }
 
 .home__social {
