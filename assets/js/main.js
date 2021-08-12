@@ -3,40 +3,9 @@ const navMenu = document.getElementById('nav-menu'),
     toggleMenu = document.getElementById('nav-toggle'),
     closeMenu = document.getElementById('nav-close')
 
-    // navMenu.classList.remove('show')
-
 // REMOVE MENU 
 const navLink = document.querySelectorAll('.nav__link')
-
-var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-// var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-
-// var width = window.innerWidth
-
-// function getWidth() {
-//     return Math.max(
-//       document.body.scrollWidth,
-//       document.documentElement.scrollWidth,
-//       document.body.offsetWidth,
-//       document.documentElement.offsetWidth,
-//       document.documentElement.clientWidth
-//     );
-//   }
-  
-//   function getHeight() {
-//     return Math.max(
-//       document.body.scrollHeight,
-//       document.documentElement.scrollHeight,
-//       document.body.offsetHeight,
-//       document.documentElement.offsetHeight,
-//       document.documentElement.clientHeight
-//     );
-//   }
-  
-//   console.log('Width:  ' +  getWidth() );
-//   console.log('Height: ' + getHeight() );
-
-console.log("WIDTH      " + width)
+const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
 if(width < 768) {
     navMenu.classList.remove('show')
@@ -49,13 +18,14 @@ if(width < 768) {
     closeMenu.addEventListener('click', ()=>{
         navMenu.classList.remove('show')
     })
+    
     function linkAction() {
         navMenu.classList.remove('show')
     }
     navLink.forEach(n => n.addEventListener('click', linkAction))
     navMenu.classList.remove('show')
 }
-else{
+else {
     navMenu.classList.toggle('show')
     if(document.getElementById('nav-close')) {
         //SHOW
@@ -76,7 +46,6 @@ else{
     }
 }
 
-
 // SCROLL SECTIONS ACTIVE LINK  
 const sections = document.querySelectorAll('section[id]')
 
@@ -84,11 +53,6 @@ window.addEventListener('scroll', scrollActive)
 
 function scrollActive() {
     const scrollY = window.pageYOffset
-    // console.log(scrollY);
-
-    // if(width < 768) {
-    //     navMenu.classList.remove('show')
-    // }
 
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight
@@ -100,9 +64,7 @@ function scrollActive() {
         }
         else {
             document.querySelector('.nav__menu a[href*='+ sectionId +']').classList.remove('active')
-            // navMenu.classList.remove('show')
         }
-
     })
 }
 
@@ -119,8 +81,7 @@ let swiperPortfolio = new Swiper(".portfolio__container", {
       el: ".swiper-pagination",
       clickable: true,
     },
-   
-  });
+});
 
   // testimonial swiper
   let swiperTestimonial = new Swiper(".testimonial__container", {
@@ -128,7 +89,6 @@ let swiperPortfolio = new Swiper(".portfolio__container", {
     grabCursor: true,
     spaceBetween: 48,
 
-  
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
