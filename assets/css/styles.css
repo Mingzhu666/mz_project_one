@@ -627,7 +627,7 @@ img {
 /* PORTFOLIO  */
 .portfolio__container {
   overflow: initial;
-  padding: 0 20px;
+  padding: 0 6px;
 }
 
 .portfolio__content {
@@ -757,7 +757,7 @@ img {
 /* TESTIMONIAL */
 .testimonial__container,
 .testimonial__content {
-  padding: 0 20px;
+  padding: 0 6px;
 }
 
 .testimonial__content {
